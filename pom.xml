@@ -10,10 +10,10 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.compagny</groupId>
-	<artifactId>my-app</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<artifactId>my-api</artifactId>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>my-app</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot web MVC H2 Thymeleaf</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -42,14 +42,14 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

@@ -32,5 +32,11 @@ public class Personne{
         this.adresse = adresse;
     }
 
+    @Override
+    public String toString() {
+        return "Personne [adresse=" + adresse + ", dateNaissance=" + dateNaissance + ", id=" + id + ", nom=" + nom
+                + ", prenom=" + prenom + "]";
+    } 
+
     // getters et setters
 }

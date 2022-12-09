@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.compagny</groupId>
 	<artifactId>my-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>my-app</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -50,7 +50,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.compagny.myapp.MyAppApplication</mainClass>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>

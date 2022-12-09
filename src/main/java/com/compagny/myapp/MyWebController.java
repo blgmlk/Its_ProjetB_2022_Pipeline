@@ -1,5 +1,8 @@
 package com.compagny.myapp;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,8 +22,12 @@ public class MyWebController {
     public String handleRequest() {
         // Create some data to render in the template
         final Context ctx = new Context();
-        ctx.setVariable("title", "My Web Page");
-        ctx.setVariable("message", "Hello, world!");
+        ctx.setVariable("title", "My Fantastique Projet B");
+        ctx.setVariable("message", "Bienvenue sur la page du Projet B !");
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-YYYY");
+        Calendar calendar = Calendar.getInstance();
+        ctx.setVariable("date", formatter.format(calendar.getTime()).toString());
 
         // Render the template with the data
         return templateEngine.process("index", ctx);

@@ -1,17 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/emojione@4.0.0/lib/js/emojione.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@4.0.0/extras/css/emojione.min.css" />
+    <style>
+        .titre_page {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+        }
+
+        .text_droite {
+            text-align: right;
+        }
+
+        .date_jour {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        .text_histoire {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            width: 80%;
+            margin: auto;
+        }
+    </style>
     <title th:text="${title}"></title>
-    </head>
-    <body>
+</head>
+
+<body>
+    <div class="titre_page">
         <h1 th:text="${message}"></h1>
-        <p>My App is running.</p>
-    </body>
+    </div>
+
+    <p class="text_droite">My App is running <span class="emoji">&#128170;</span></p>
+    <p class="date_jour">Nous somme le : <span th:text="${date}">erreur</span></p>
+    <h2>L'histoire du Dragon par Openai</h2>
+    <div class="text_histoire">
+        <p>Il était une fois, sur la lune, un dragon qui avait une passion pour la programmation. Il passait des heures
+            à coder sur son ordinateur portable, en écoutant de la musique relaxante comme "Despues de la playa" de Bad
+            Bunny.
+            <br>
+            Le dragon était très talentueux et avait créé de nombreux programmes incroyables. Sa plus grande réussite
+            était un jeu vidéo sur la lune qui avait conquis les coeurs de millions de joueurs sur la Terre.
+            <br>
+            Un jour, le dragon décida de créer un programme pour aider les autres dragons à apprendre à coder. Il
+            travailla dur pendant des semaines pour mettre au point un système d'apprentissage en ligne facile à
+            utiliser. Quand il eut fini, il lança son programme et fut émerveillé par la réaction des autres dragons.
+            Ils étaient tous ravis de pouvoir apprendre à coder grâce à son programme, et le remercièrent
+            chaleureusement.
+            <br>
+            Le dragon était fier de son travail et heureux d'avoir pu aider les autres dragons à découvrir leur passion
+            pour la programmation. Il continua à coder sur la lune, en écoutant toujours de la musique relaxante pour se
+            détendre et se concentrer sur son travail. Et il vécut heureux pour toujours.
+        </p>
+    </div>
+    <img class="jenkinspixel" src="/static/jenkinspixel.png"
+        alt="Jenkins avec un écran d'ordinateur en pixel --> Dall-E2">
 </body>
+</body>
+
 </html>

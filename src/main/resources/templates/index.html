@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <title><%= title %></title>
+    <title th:text="${title}"></title>
     </head>
     <body>
-        <h1><%= message %></h1>
+        <h1 th:text="${message}"></h1>
         <p>My App is running.</p>
     </body>
 </body>

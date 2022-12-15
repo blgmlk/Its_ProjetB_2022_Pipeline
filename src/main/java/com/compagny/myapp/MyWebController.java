@@ -38,11 +38,4 @@ public class MyWebController {
     public String sayHello() {
         return "Hello, World!";
     }
-
-    // @RequestMapping(path = "/users/{id}", method = RequestMethod.GET)
-    // @ResponseBody
-    // public User getUser(@PathVariable("id") Long userId) {
-    // // Récupère et retourne l'utilisateur avec l'identifiant spécifié.
-    // }
-
 }

@@ -37,6 +37,4 @@ public class Personne{
         return "Personne [adresse=" + adresse + ", dateNaissance=" + dateNaissance + ", id=" + id + ", nom=" + nom
                 + ", prenom=" + prenom + "]";
     } 
-
-    // getters et setters
 }

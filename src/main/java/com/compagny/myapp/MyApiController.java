@@ -16,17 +16,17 @@ public class MyApiController {
     @Autowired
     private PersonneRepository personneRepository;
 
-    @RequestMapping("/api/")
+    @RequestMapping("/api")
     public String index() {
         return "API disponible !";
     }
 
-    @GetMapping(value = "/api/personnes/")
+    @GetMapping(value = "/api/personnes")
     public List<Personne> getPersonnes() {
         return personneRepository.findAll();
     }
 
-    @PostMapping(value = "/api/personnes/")
+    @PostMapping(value = "/api/personnes")
     public Personne addPersonne(@RequestBody Personne personne) {
         return personneRepository.saveAndFlush(personne);
     }

@@ -1,4 +1,4 @@
-node() {
+node() { 
     stage('Clone') {
        // sh 'if [ -d "Its_ProjetB_2022_Pipeline" ]; then rm -rf Its_ProjetB_2022_Pipeline ; fi;'
         git 'https://github.com/blgmlk/Its_ProjetB_2022_Pipeline.git'
@@ -52,6 +52,10 @@ node() {
      stage('verify') {
         sh 'docker inspect zinadocker'
     }
-
+    
+    stage ('Clean the worspace') {
+        // Delete the workspace direcory
+        cleanWs()
+    }
 }
 
